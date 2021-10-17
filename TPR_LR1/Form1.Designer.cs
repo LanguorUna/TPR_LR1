@@ -47,29 +47,33 @@ namespace TPR_LR1
             // 
             // grid
             // 
+            this.grid.AllowUserToAddRows = false;
+            this.grid.AllowUserToDeleteRows = false;
             this.grid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.grid.BackgroundColor = System.Drawing.Color.Ivory;
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid.Location = new System.Drawing.Point(12, 182);
+            this.grid.Location = new System.Drawing.Point(10, 136);
+            this.grid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grid.Name = "grid";
             this.grid.RowHeadersWidth = 50;
             this.grid.RowTemplate.Height = 29;
-            this.grid.Size = new System.Drawing.Size(849, 515);
+            this.grid.Size = new System.Drawing.Size(743, 386);
             this.grid.TabIndex = 0;
             // 
             // numericUpDownN
             // 
-            this.numericUpDownN.Location = new System.Drawing.Point(53, 149);
+            this.numericUpDownN.Location = new System.Drawing.Point(46, 112);
+            this.numericUpDownN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownN.Minimum = new decimal(new int[] {
-            3,
+            1,
             0,
             0,
             0});
             this.numericUpDownN.Name = "numericUpDownN";
-            this.numericUpDownN.Size = new System.Drawing.Size(51, 27);
+            this.numericUpDownN.Size = new System.Drawing.Size(45, 23);
             this.numericUpDownN.TabIndex = 1;
             this.numericUpDownN.Value = new decimal(new int[] {
             3,
@@ -80,40 +84,41 @@ namespace TPR_LR1
             // labelLegenda
             // 
             this.labelLegenda.AutoSize = true;
-            this.labelLegenda.Location = new System.Drawing.Point(14, 13);
+            this.labelLegenda.Location = new System.Drawing.Point(12, 10);
             this.labelLegenda.Name = "labelLegenda";
-            this.labelLegenda.Size = new System.Drawing.Size(36, 20);
+            this.labelLegenda.Size = new System.Drawing.Size(28, 15);
             this.labelLegenda.TabIndex = 3;
             this.labelLegenda.Text = "Text";
             // 
             // labelN
             // 
             this.labelN.AutoSize = true;
-            this.labelN.Location = new System.Drawing.Point(14, 151);
+            this.labelN.Location = new System.Drawing.Point(12, 113);
             this.labelN.Name = "labelN";
-            this.labelN.Size = new System.Drawing.Size(34, 20);
+            this.labelN.Size = new System.Drawing.Size(27, 15);
             this.labelN.TabIndex = 4;
             this.labelN.Text = "N =";
             // 
             // labelS
             // 
             this.labelS.AutoSize = true;
-            this.labelS.Location = new System.Drawing.Point(114, 151);
+            this.labelS.Location = new System.Drawing.Point(100, 113);
             this.labelS.Name = "labelS";
-            this.labelS.Size = new System.Drawing.Size(31, 20);
+            this.labelS.Size = new System.Drawing.Size(24, 15);
             this.labelS.TabIndex = 6;
             this.labelS.Text = "S =";
             // 
             // numericUpDownS
             // 
-            this.numericUpDownS.Location = new System.Drawing.Point(151, 149);
+            this.numericUpDownS.Location = new System.Drawing.Point(132, 112);
+            this.numericUpDownS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownS.Minimum = new decimal(new int[] {
             2,
             0,
             0,
             0});
             this.numericUpDownS.Name = "numericUpDownS";
-            this.numericUpDownS.Size = new System.Drawing.Size(51, 27);
+            this.numericUpDownS.Size = new System.Drawing.Size(45, 23);
             this.numericUpDownS.TabIndex = 5;
             this.numericUpDownS.Value = new decimal(new int[] {
             2,
@@ -124,22 +129,23 @@ namespace TPR_LR1
             // labelStages
             // 
             this.labelStages.AutoSize = true;
-            this.labelStages.Location = new System.Drawing.Point(218, 151);
+            this.labelStages.Location = new System.Drawing.Point(191, 113);
             this.labelStages.Name = "labelStages";
-            this.labelStages.Size = new System.Drawing.Size(31, 20);
+            this.labelStages.Size = new System.Drawing.Size(25, 15);
             this.labelStages.TabIndex = 8;
             this.labelStages.Text = "n =";
             // 
             // numericUpDownStages
             // 
-            this.numericUpDownStages.Location = new System.Drawing.Point(255, 149);
+            this.numericUpDownStages.Location = new System.Drawing.Point(223, 112);
+            this.numericUpDownStages.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownStages.Minimum = new decimal(new int[] {
             3,
             0,
             0,
             0});
             this.numericUpDownStages.Name = "numericUpDownStages";
-            this.numericUpDownStages.Size = new System.Drawing.Size(51, 27);
+            this.numericUpDownStages.Size = new System.Drawing.Size(45, 23);
             this.numericUpDownStages.TabIndex = 7;
             this.numericUpDownStages.Value = new decimal(new int[] {
             3,
@@ -150,9 +156,10 @@ namespace TPR_LR1
             // buttonRecreateTable
             // 
             this.buttonRecreateTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRecreateTable.Location = new System.Drawing.Point(713, 142);
+            this.buttonRecreateTable.Location = new System.Drawing.Point(624, 106);
+            this.buttonRecreateTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonRecreateTable.Name = "buttonRecreateTable";
-            this.buttonRecreateTable.Size = new System.Drawing.Size(148, 29);
+            this.buttonRecreateTable.Size = new System.Drawing.Size(130, 22);
             this.buttonRecreateTable.TabIndex = 9;
             this.buttonRecreateTable.Text = "Создать таблицу";
             this.buttonRecreateTable.UseVisualStyleBackColor = true;
@@ -161,9 +168,10 @@ namespace TPR_LR1
             // buttonSaveData
             // 
             this.buttonSaveData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSaveData.Location = new System.Drawing.Point(713, 735);
+            this.buttonSaveData.Location = new System.Drawing.Point(624, 551);
+            this.buttonSaveData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSaveData.Name = "buttonSaveData";
-            this.buttonSaveData.Size = new System.Drawing.Size(148, 29);
+            this.buttonSaveData.Size = new System.Drawing.Size(130, 22);
             this.buttonSaveData.TabIndex = 10;
             this.buttonSaveData.Text = "Ок";
             this.buttonSaveData.UseVisualStyleBackColor = true;
@@ -171,9 +179,9 @@ namespace TPR_LR1
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(873, 776);
+            this.ClientSize = new System.Drawing.Size(764, 582);
             this.Controls.Add(this.buttonSaveData);
             this.Controls.Add(this.buttonRecreateTable);
             this.Controls.Add(this.labelStages);
@@ -184,6 +192,7 @@ namespace TPR_LR1
             this.Controls.Add(this.labelLegenda);
             this.Controls.Add(this.numericUpDownN);
             this.Controls.Add(this.grid);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();

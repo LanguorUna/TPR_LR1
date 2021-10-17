@@ -52,24 +52,36 @@ namespace TPR_LR1
             RecreateTable(N, S);
         }
 
-        private double[,] createModel()
+        private void createModel()
         {
-            double[,] model = new double[grid.Rows.Count-1, grid.Columns.Count]; 
+            int N = Convert.ToInt32(numericUpDownN.Value);
+            int S = Convert.ToInt32(numericUpDownS.Value);
 
-            for (int i = 0; i < grid.Rows.Count-1; i++)
+            var strategies = new List<Strategy>();
+            for (int str = 0; str < S; str++)
             {
-                for (int j = 0; j < grid.Rows[i].Cells.Count; j++)
+                var P = new double[N, N];
+                var R = new double[N, N];
+                for (int i = 0; i < N; i++)
                 {
-                    model[i, j] = Convert.ToDouble(grid.Rows[i].Cells[j].Value);
+                    for (int j = 0; j < N; j++)
+                    {
+                        P[i, j] = Convert.ToDouble(grid.Rows[i * N + j].Cells[str * 2].Value);
+                        R[i, j] = Convert.ToDouble(grid.Rows[i * N + j].Cells[str * 2 + 1].Value);
+                    }
                 }
+
+                strategies.Add(new Strategy(R, P, N));
             }
-            return model;
+            
+            var model = new Model() { stages = Convert.ToInt32(numericUpDownStages.Value), strategies = strategies };
+            model.calculate();
+
         }
 
         private void buttonSaveData_Click(object sender, EventArgs e)
         {
-            double[,] model = createModel();
-            MessageBox.Show(model.ToString());
+            createModel();
         }
     }
 }
