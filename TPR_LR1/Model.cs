@@ -66,7 +66,7 @@ namespace TPR_LR1
                 // c - перебор состояний
                 for (int c = 0; c < strategies[0].N; c++)
                 {
-                    v += profit(state, stage - 1).Item1 * strategies[str].P[state,c]; 
+                    v += profit(c, stage - 1).Item1 * strategies[str].P[state,c]; 
                 }
                 list.Add(v);
             }
