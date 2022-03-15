@@ -227,7 +227,7 @@ namespace TPR_LR1
             this.MinimumSize = new System.Drawing.Size(18, 740);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TPR-1";
+            this.Text = "Дискретные марковские процессы";
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownS)).EndInit();
